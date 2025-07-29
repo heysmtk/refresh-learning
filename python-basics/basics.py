@@ -46,3 +46,36 @@ full_name = first_name + " " + last_name
 print(full_name)
 print(f"{first_name} {last_name}")
 
+# boolean 
+me_student = False
+have_car = True
+
+# comparsion
+age = 30
+adult = age >= 18   # True
+senior = age >= 65  # False
+
+# task bool, comparsion
+my_age_comp = 30 >= 16  # True
+print(my_age_comp)
+
+# lists
+fruits = ["apple", "banana", "peach"]
+first_fruit = fruits[0]
+last_fruit = fruits[-1]
+fruits.append("orange")
+fruits.insert(1, "kiwi")
+print(fruits)
+fruits.remove("peach")
+last_fruit = fruits.pop()
+print(fruits)
+length_list = len(fruits)
+is_there = "banana" in fruits
+print(length_list, is_there)
+
+# task - lists
+my_fav_movies = ["Oppenheimer", "Interstellar", "Equallizer"]
+my_fav_movies.append("Superman")
+print(my_fav_movies)
+
+# conditions
