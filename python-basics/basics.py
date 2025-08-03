@@ -79,3 +79,86 @@ my_fav_movies.append("Superman")
 print(my_fav_movies)
 
 # conditions
+age = 18
+
+if age >= 18:
+    print("Můžeš řídit auto")
+elif age >= 15:
+    print("Můžeš jet na mopude")
+else:
+    print("Ještě musíš počkat")
+    
+a == b  # rovná se
+a != b  # nerovná se
+a > b   # větší než
+a < b   # menší než
+a >= b  # větší nebo rovno
+a <= b  # menší nebo rovno
+
+# logic operators
+vek = 18
+ma_ridicak = True
+
+if vek >= 18 and ma_ridicak:
+    print("Můžeš řídit!")
+
+if vek <= 18 or not ma_ridicak:
+    print("Nemůžeš řídit!")
+    
+# task for conditions and logic operations
+age_task = 20
+
+if age_task < 13:
+    print("Jsi dítě")
+elif age_task <= 19:
+    print("Jsi teenager")
+else:
+    print("Jsi dospělý")
+    
+# loops (for, while)
+# for loop (když víš kolikrát opakovat)
+
+ovoce = ["jablko", "hruška", "banán"]
+
+# projde celý seznam a postupně vypíše jednotlivé položky
+for item in ovoce:
+    print(f"Mam rád {item}")
+    
+# range (od-do)
+for i in range(5):
+    print(f"číslo: {i}")
+    
+for i in range(2, 8):
+    print(f"číslo_2: {i}")
+    
+# s indexem i hodnotou
+for i, item in enumerate(ovoce):
+    print(f"{i+1}. {item}")
+    
+# while loop (dokud smyčka platí tak jede)
+counter = 0
+while counter < 5:
+    print(f"Počítadlo: {counter}")
+    counter += 1
+    
+# task loops
+for i in range(1, 11):
+    print(f"číslo: {i}")
+    
+# dictionaries
+student = {
+    "name": "Anno",
+    "age": 22,
+    "obor": "informatika"
+}
+
+jmeno = student["name"]
+vek = student.get("vek", 0)     # 0 is default value
+
+# změna/přidání
+student["rocnik"] = 3
+student["age"] = 23
+
+# procházení
+for key, value in student.items():
+    print(f"{key}, {value}")
