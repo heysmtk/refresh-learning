@@ -162,3 +162,62 @@ student["age"] = 23
 # procházení
 for key, value in student.items():
     print(f"{key}, {value}")
+    
+# task - dicts
+my_dict = {
+    "jmeno": "Tomáš",
+    "vek": 29,
+    "hobby": "calisthenics"
+}
+
+print(f"Moje jméno je {my_dict['jmeno']}, mám {my_dict['vek']} let a můj koníček je hlavně {my_dict['hobby']}")
+
+# functions
+def pozdrav():
+    print("Ahoj tohle je print z funkce - pozdrav()!")
+    
+# volání funkce
+pozdrav()
+
+# functions with parameters
+def pozdrav_jmeno(jmeno):
+    print(f"Ahoj {jmeno}!")
+    
+pozdrav_jmeno("Kačenka")
+
+def secti(a, b):
+    result = a + b
+    print(f"{a} + {b} = {result}")
+    
+secti(5, 3)
+
+# functions with returned value
+def secti_a_vrat(a, b):
+    return a + b
+
+def je_sude(cislo):
+    return cislo % 2 == 0
+
+# usecase
+vysledek = secti_a_vrat(10, 5)
+print(vysledek)
+if je_sude(8):
+    print("8 je sudé číslo")
+    
+# default paramater values
+def predstav_se(jmeno, vek=18, mesto="Praha"):
+    print(f"Jmenuji se {jmeno}, je mi {vek} let a jsem z {mesto}")
+    
+# some calls
+predstav_se("Anna")     # uses default age and city
+predstav_se("Karel", 25)    # uses default city
+predstav_se("Petra", 30, "Brno")    # all parameters has been set
+predstav_se("Tom", mesto="Ostrava")
+
+# task for functions
+def obvod_obdelnika(sirka, vyska):
+    return (2 * sirka) + (2 * vyska)
+
+print(obvod_obdelnika(23, 45))
+
+# error handling - try/except
