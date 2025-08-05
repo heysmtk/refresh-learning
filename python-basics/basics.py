@@ -181,11 +181,11 @@ pozdrav()
 
 # functions with parameters
 def pozdrav_jmeno(jmeno):
-    print(f"Ahoj {jmeno}!")
+    print(f"Ahoj {jmeno}!") 
     
-pozdrav_jmeno("Kačenka")
+pozdrav_jmeno("Kačenka") 
 
-def secti(a, b):
+def secti(a, b): 
     result = a + b
     print(f"{a} + {b} = {result}")
     
@@ -221,3 +221,68 @@ def obvod_obdelnika(sirka, vyska):
 print(obvod_obdelnika(23, 45))
 
 # error handling - try/except
+# try:
+#     cislo = int(input("Zadej číslo: "))
+#     vysledek = 10 / cislo
+#     print(f"Výsledek: {vysledek}")
+# except ValueError:
+#     print("Tohle není platné číslo!")
+# except ZeroDivisionError:
+#     print("Nelze dělit nulou!")
+    
+# zachycení více chyb
+# try:
+#     soubor = open("neexistujici_soubor.txt", "r")
+#     obsah = soubor.read()
+# except (FileNotFoundError, PermissionError) as e:
+#     print(f"Problém se souborem: {e}")
+    
+# try-except-else-finally
+def bezpecne_deleni(a, b):
+    try:
+        vysledek = a / b
+    except ZeroDivisionError:
+        print("Chyba: Dělení nulou!")
+        return None
+    except TypeError:
+        print("Chyba: Neplatné typy dat!")
+        return None
+    else:
+        print("Dělení proběhlo úspěšně!")
+        return vysledek
+    finally:
+        print("Tato zpráva se zobrazí vždy!")
+        
+print(bezpecne_deleni(10, 2))
+print(bezpecne_deleni(10, 0))
+print(bezpecne_deleni("a", 2))
+
+# vlastní vyjímky
+class TooOld(Exception):
+    pass
+
+def zkontroluj_vek(vek):
+    if vek < 0:
+        raise ValueError("Věk nemůže být záporný")
+    if vek > 150:
+        raise TooOld("Přílíš velký věk")
+    return True
+
+try:
+    zkontroluj_vek(200)
+except ValueError as e:
+    print(f"Chyba hodnoty: {e}")
+except TooOld as e:
+    print(f"Vlastní chyba: {e}")
+    
+# task - ošetření chyb
+def bezpecny_vstup(num):
+        vstup = int(input("Zadej PIN: "))
+        if vstup != 1234:
+            print("Neplatný PIN!")
+        return True
+    
+try:
+    bezpecny_vstup(4321)
+except ValueError as e:
+    print(f"Chyba hodnoty: {e}")
