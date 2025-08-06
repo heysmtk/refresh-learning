@@ -276,13 +276,40 @@ except TooOld as e:
     print(f"Vlastní chyba: {e}")
     
 # task - ošetření chyb
-def bezpecny_vstup(num):
-        vstup = int(input("Zadej PIN: "))
-        if vstup != 1234:
-            print("Neplatný PIN!")
-        return True
+# def bezpecny_vstup(num):
+#         vstup = int(input("Zadej PIN: "))
+#         if vstup != 1234:
+#             print("Neplatný PIN!")
+#         return True
     
+# try:
+#     bezpecny_vstup(4321)
+# except ValueError as e:
+#     print(f"Chyba hodnoty: {e}")
+    
+# práce se soubory
+# základní čtení
 try:
-    bezpecny_vstup(4321)
-except ValueError as e:
-    print(f"Chyba hodnoty: {e}")
+    with open("sample.txt", "r", encoding="utf-8") as soubor:
+        obsah = soubor.read()
+        print(obsah)
+except FileNotFoundError:
+    print("Soubor neexistuje!")
+    
+# čtení po řádcích
+try:
+    with open("sample.txt", "r", encoding="utf-8") as soubor:
+        for line in soubor:
+            print(line.strip())
+except FileNotFoundError:
+    print("Soubor neexistuje!")
+    
+# načtení počet řádků
+try:
+    with open("sample.txt", "r", encoding="utf-8") as soubor:
+        radky = soubor.readlines()
+        print(f"Soubor má {len(radky)} řádků")
+except FileNotFoundError:
+    print("Soubor neexistuje!")
+    
+# zápis do souboru
