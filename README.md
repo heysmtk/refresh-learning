@@ -10,7 +10,8 @@ This project is a personal playground for revisiting and strengthening core Pyth
 
 - **Python Basics**
   - Variables, loops, conditionals
-  - Functions, lists, dictionaries, etc.
+  - Functions, lists, dictionaries
+  - And more...
 - **Object-Oriented Programming (OOP)**
   - Classes and objects
   - Inheritance, encapsulation, polymorphism
