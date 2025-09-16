@@ -90,38 +90,3 @@ def delete_entry(entry_id):
     
     save_entries(new_entries)
     return find
- 
- 
- 
-
-# ------------------------------------------------------------------------
-
-# print("Před smazáním:")
-# print(load_entries())
-
-# print("Výsledek smazání:", delete_entry(8))
-
-# print("Po smazání:")
-# print(load_entries())
-
-# testovací přidání nového zápisu
-# new_entry = add_entry(text="Dnes jsem testoval add_entry funkci.")
-# print("Nový záznam:", new_entry)
-
-# # načtení všech záznamů, abychom viděli, že se přidal
-# all_entries = load_entries()
-# print("Všechny záznamy:")
-# for entry in all_entries:
-#     print(entry)
-        
-# Test set
-# dataset = [
-#     {"id": 1, "date": "2025-09-10", "text": "Šel jsem na procházku"},
-#     {"id": 2, "date": "2025-09-11", "text": "Pracoval jsem na projektu"},
-#     {"id": 3, "date": "2025-09-12", "text": "Byl jsem ve fitku"},
-#     {"id": 4, "date": "2025-09-13", "text": "Četl jsem knihu"},
-#     {"id": 5, "date": "2025-09-14", "text": "Hrál jsem deskovky s rodinou"}
-# ]
-
-# save_entries(dataset)
-# print(load_entries())
