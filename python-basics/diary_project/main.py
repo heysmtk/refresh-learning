@@ -3,6 +3,7 @@ from diary_data import add_entry, delete_entry, load_entries
 
 def main():
     print("Welcome to Diary Notes!")
+    
     while True:
         try:
             print("------------------------------------------")
@@ -40,14 +41,9 @@ def main():
             else:
                 print("ERROR: Invalid input, try again.")
                         
-        
         except ValueError:
             print("ERROR: The value must be a integer!")
         
 
-
-
-
-       
 if __name__ == "__main__":
     main()
